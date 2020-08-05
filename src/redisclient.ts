@@ -97,7 +97,7 @@ export class RedisClient{
     });
   }
 
-  public removeCallBack(redismethods : RedisMethods){
+  private removeCallBack(redismethods : RedisMethods){
     if (redismethods == RedisMethods.SET){
       this.server.removeListener('data', this.callbackSet);
     }
